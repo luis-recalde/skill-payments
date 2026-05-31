@@ -19,7 +19,7 @@ Skill para [Claude Code](https://claude.ai/code) que integra pagos online en pro
 | **Stripe** | Mercados internacionales, suscripciones, marketplaces |
 | **PayPal** | Audiencias globales o países donde Mercado Pago no opera |
 
-### Soporte especial LATAM — Mercado Pago
+### Soporte especial por país
 
 La skill conoce las particularidades de cada mercado:
 
@@ -27,26 +27,23 @@ La skill conoce las particularidades de cada mercado:
 - **Ecuador** — IVA 15% (vigente desde 2024), facturación SRI
 - **Argentina** — IVA 21%, factura electrónica AFIP, cuotas sin interés, impuesto PAIS
 - **México** — IVA 16%, CFDI (SAT), CLABE interbancaria, retención automática en marketplace
+- **Estados Unidos** — sin IVA federal, sales tax por estado, W-9/1099 para pagos a contratistas, Stripe recomendado
 
 ---
 
 ## Instalación
 
-### Opción 1 — Global (disponible en todos tus proyectos)
+### Opción 1 — Global (recomendado)
 
 ```bash
-# Copiar el archivo SKILL.md a la carpeta global de skills de Claude Code
-cp SKILL.md ~/.claude/skills/payments.md
+git clone https://github.com/luis-recalde/skill-payments ~/.claude/skills/skill-payments
 ```
 
-### Opción 2 — Por proyecto
+### Opción 2 — Solo este proyecto
 
 ```bash
-# Copiar el archivo SKILL.md a la raíz del proyecto
-cp SKILL.md ./SKILL.md
+cp ~/.claude/skills/skill-payments/SKILL.md .claude/SKILL.md
 ```
-
-Claude Code detecta automáticamente los archivos `SKILL.md` en la raíz del proyecto y en `~/.claude/skills/`.
 
 ---
 
@@ -95,8 +92,7 @@ La skill aplica buenas prácticas de seguridad en cada integración generada:
 
 ## Requisitos
 
-- Next.js 14+ (App Router)
-- Tailwind CSS
+- Cualquier proyecto web
 - Node.js 18+
 
 ---
